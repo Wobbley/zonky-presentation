@@ -8,8 +8,9 @@ import java.util.*
 class Office(
         @Column(nullable = false)
         val name: String,
-
+)
+{
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        val id: UUID? = null,
-)
+        val id: UUID? = null
+}
