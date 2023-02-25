@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RestController
 import java.util.*
+import org.springframework.web.bind.annotation.RequestBody
 
 @RestController
 class OfficeController(private val officeService: OfficeService) {
@@ -15,7 +16,7 @@ class OfficeController(private val officeService: OfficeService) {
     }
 
     @PostMapping("/office")
-    fun createOffice(office: Office): Office {
+    fun createOffice(@RequestBody office: Office): Office {
         return officeService.createOffice(office)
     }
 

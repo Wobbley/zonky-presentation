@@ -1,0 +1,1 @@
+INSERT INTO office VALUES('9eab95f9-5899-428a-a2ca-7ff01579e84f', 'test office')
