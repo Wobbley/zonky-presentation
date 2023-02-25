@@ -4,6 +4,7 @@ import jakarta.persistence.*
 import java.util.*
 
 @Table(name = "office")
+@Entity
 class Office(
         @Column(nullable = false)
         val name: String,
