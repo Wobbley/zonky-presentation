@@ -1,6 +1,7 @@
 package no.lozo.zonkypresentation.office
 
 import io.zonky.test.db.AutoConfigureEmbeddedDatabase
+import io.zonky.test.db.AutoConfigureEmbeddedDatabase.DatabaseProvider.ZONKY
 import io.zonky.test.db.AutoConfigureEmbeddedDatabase.RefreshMode.*
 import java.util.UUID
 import org.junit.jupiter.api.Assertions.*
@@ -12,7 +13,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.http.ResponseEntity
 import org.springframework.test.context.jdbc.Sql
 
-@AutoConfigureEmbeddedDatabase(refresh = AFTER_EACH_TEST_METHOD)
+@AutoConfigureEmbeddedDatabase(provider = ZONKY, refresh = AFTER_EACH_TEST_METHOD)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Sql("/office-controller-test-data.sql")

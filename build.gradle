@@ -36,16 +36,15 @@ dependencies {
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.zonky.test:embedded-database-spring-test:2.2.0'
+    testImplementation 'io.zonky.test:embedded-postgres:2.0.2'
+    testImplementation 'io.zonky.test.postgres:embedded-postgres-binaries-darwin-arm64v8:15.1.0'
+    testImplementation 'io.zonky.test.postgres:embedded-postgres-binaries-darwin-amd64:15.1.0'
 
 }
 
-tasks.withType(KotlinCompile) {
+tasks.withType(KotlinCompile).configureEach {
     kotlinOptions {
         freeCompilerArgs = ['-Xjsr305=strict']
         jvmTarget = '17'
     }
-}
-
-tasks.named('test') {
-    useJUnitPlatform()
 }
