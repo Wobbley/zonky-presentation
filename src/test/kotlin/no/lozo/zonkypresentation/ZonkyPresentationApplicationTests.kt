@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest
 class ZonkyPresentationApplicationTests {
 
     @Test
-    fun contextLoads() {
+    fun baseLine() {
     }
 
 }
