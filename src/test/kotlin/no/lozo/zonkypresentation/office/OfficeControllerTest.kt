@@ -13,9 +13,8 @@ import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.http.ResponseEntity
 import org.springframework.test.context.jdbc.Sql
 
-@AutoConfigureEmbeddedDatabase(provider = ZONKY, refresh = AFTER_EACH_TEST_METHOD)
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@AutoConfigureEmbeddedDatabase(provider = ZONKY, refresh = AFTER_EACH_TEST_METHOD)
 @Sql("/office-controller-test-data.sql")
 class OfficeControllerTest {
 
